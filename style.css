@@ -1,0 +1,129 @@
+:root{
+	--cont-size: 70vmin;
+	--flag-button-color: rgb(50,255,50);
+	--restart-button-color: rgb(255, 50,50);
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Monsterrat", "Helvetica", serif, sans-serif;
+}
+
+body{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: black;
+	overflow: hidden;
+}
+
+#cont{
+	width: var( --cont-size );
+	height: var( --cont-size );
+	background: rgb(185,185,184);
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.boxes{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2rem;
+	font-weight: 600;
+	width: calc( var( --cont-size ) / 10 );
+	height: calc( var( --cont-size ) / 10 );
+	border: 1px dashed rgb(128,129,129);
+}
+
+.bomb{
+	background-image: url(bomb.png);
+	background-size: cover;
+}
+
+.block-img{
+	position: absolute;
+	width: calc( var( --cont-size ) / 10 );
+	height: calc( var( --cont-size ) / 10 );
+}
+
+#buttons{
+	padding: 30px;
+}
+
+#buttons button{
+	margin: 20px;
+}
+
+#flag{
+	width: 100px;
+	height: 30px;
+	color: white;
+	font-size: 1.3rem;
+	font-weight: 700;
+	background-color: var(--flag-button-color);
+	border: none;
+	outline: none;
+	box-shadow: 1px 1px 10px var(--flag-button-color),
+				-1px -1px 10px var(--flag-button-color);
+	transition: 0.2s;
+}
+
+#flag:hover{
+	box-shadow: 3px 3px 10px 2px var(--flag-button-color),
+				-3px -3px 10px 2px var(--flag-button-color);
+	transform: translate(-2px);
+}
+
+#flag:active{
+	box-shadow: 1px 1px 2px 2px var(--flag-button-color),
+				-1px -1px 2px 2px var(--flag-button-color),
+				-1px 1px 2px 2px var(--flag-button-color),
+				1px -1px 2px 2px var(--flag-button-color);
+	transform: translate(2px);
+}
+
+.flag-button-on{
+	--flag-button-color: rgb(50,50,255);
+}
+
+#restart{
+	width: 100px;
+	height: 30px;
+	color: white;
+	font-size: 1.3rem;
+	font-weight: 700;
+	background-color: var(--restart-button-color);
+	border: none;
+	outline: none;
+	box-shadow: 1px 1px 10px var(--restart-button-color),
+				-1px -1px 10px var(--restart-button-color);
+	transition: 0.2s;
+}
+
+#restart:hover{
+	box-shadow: 3px 3px 10px 2px var(--restart-button-color),
+				-3px -3px 10px 2px var(--restart-button-color);
+	transform: translate(-2px);
+}
+
+#restart:active{
+	box-shadow: 1px 1px 2px 2px var(--restart-button-color),
+				-1px -1px 2px 2px var(--restart-button-color),
+				-1px 1px 2px 2px var(--restart-button-color),
+				1px -1px 2px 2px var(--restart-button-color);
+	transform: translate(2px);
+}
+
+#cv{
+	display: block;
+	position: absolute;
+	top : 0;
+	left: 0;
+	z-index:-10;
+}

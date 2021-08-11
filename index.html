@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Minesweeper</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="cont"></div>
+	<div id="buttons">
+		<button id="flag">Flag off</button>
+		<button id="restart">Restart</button>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+	<canvas id="cv"></canvas>
+	<script type="text/javascript" src="./ParticleJS.js"></script>
+	<script type="text/javascript">
+		Particles.init({
+			selector: "#cv",
+			color: "rgb(50,50,200)",
+			background: "rgb(0,0,0)",
+			opacity: "random",
+			fullScreen: true,
+		});
+	</script>
+</body>
+</html>
